@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- ADMIN TEMPLATE -->
+	<definition name="admin.template"
+		template="/WEB-INF/templates/admin/template.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/templates/admin/header.jsp" />
+		<put-attribute name="title"
+			value="Bãi xe thông minh" />
+		<put-attribute name="left-sidebar"
+			value="/WEB-INF/templates/admin/left-sidebar.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/templates/admin/footer.jsp" />
+
+		<put-list-attribute name="javascripts">
+			<add-attribute value="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" />
+			<add-attribute value="/adminUrl/js/jquery.min.js" />
+			<add-attribute value="/adminUrl/js/jquery-ui-1.10.3.min.js" />
+			<add-attribute value="/adminUrl/js/bootstrap.min.js" />
+			<add-attribute value="/adminUrl/js/plugins/daterangepicker/daterangepicker.js" />
+			<add-attribute value="/adminUrl/js/plugins/chart.js" />
+			<add-attribute value="/adminUrl/js/plugins/iCheck/icheck.min.js" />
+			<add-attribute value="/adminUrl/js/plugins/fullcalendar/fullcalendar.js" />
+			<add-attribute value="/adminUrl/js/Director/app.js" />
+			<add-attribute value="/adminUrl/js/Director/dashboard.js" />
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets">
+			<add-attribute value="/adminUrl/css/bootstrap.min.css" />
+			<add-attribute
+				value="/adminUrl/css/font-awesome.min.css" />
+			<add-attribute value="/adminUrl/css/ionicons.min.css" />
+			<add-attribute value="/adminUrl/css/morris/morris.css" />
+			<add-attribute
+				value="/adminUrl/css/jvectormap/jquery-jvectormap-1.2.2.css" />
+			<add-attribute
+				value="/adminUrl/css/datepicker/datepicker3.css" />
+			<add-attribute
+				value="/adminUrl/css/daterangepicker/daterangepicker-bs3.css" />
+			<add-attribute value="/adminUrl/css/iCheck/all.css" />
+			<add-attribute value="/adminUrl/css/style.css" />
+			<add-attribute value="http://fonts.googleapis.com/css?family=Lato" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="admin.index.index"
+		extends="admin.template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/index/index.jsp" />
+	</definition>
+	<definition name="admin.form" extends="admin.template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/form.jsp" />
+	</definition>
+	<definition name="admin.general" extends="admin.template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/general.jsp" />
+	</definition>
+	<definition name="admin.simple" extends="admin.template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/simple.jsp" />
+	</definition>
+
+
+	<definition name="admin.user.index" extends="admin.template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/user/index.jsp" />
+	</definition>
+	<definition name="admin.user.add" extends="admin.template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/user/add.jsp" />
+	</definition>
+	<definition name="admin.user.edit" extends="admin.template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/user/edit.jsp" />
+	</definition>
+
+
+	<definition name="admin.price.index"
+		extends="admin.template">
+		<!-- <put-attribute name="title" expression="${requestScope.title}"/> -->
+		<put-attribute name="title" expression="${title}"/>
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/price/index.jsp" />
+	</definition>
+
+</tiles-definitions>
