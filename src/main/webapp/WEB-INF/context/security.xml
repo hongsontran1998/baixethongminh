@@ -12,6 +12,8 @@
 
 		<intercept-url pattern="/admincp"
 			access="hasAnyRole('ADMIN', 'USER')" />
+		<intercept-url pattern="/profile"
+			access="hasAnyRole('ADMIN', 'USER')" />
 		<intercept-url pattern="/admincp/"
 			access="hasAnyRole('ROLE_ADMIN', 'USER')" />
 		<intercept-url pattern="/admin/user/**"

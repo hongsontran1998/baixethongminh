@@ -77,6 +77,10 @@
 		<put-attribute name="content"
 			value="/WEB-INF/views/admin/user/edit.jsp" />
 	</definition>
+	<definition name="admin.user.profile" extends="admin.template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/user/profile.jsp" />
+	</definition>
 
 
 	<definition name="admin.price.index"
