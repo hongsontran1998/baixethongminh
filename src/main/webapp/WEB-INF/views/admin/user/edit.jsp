@@ -8,17 +8,11 @@
             <header class="panel-heading">
                 Cập nhật người dùng
             </header>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="breadcrumb">
-                            <li><a href="${pageContext.request.contextPath}/admincp"><i class="fa fa-home"></i> Home</a></li>
-                            <li><a href="${pageContext.request.contextPath}/admin/user/index"> User</a></li>
-                            <li class="active">User</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <ul class="breadcrumb">
+                <li><a href="${pageContext.request.contextPath}/admincp"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/admin/user/index"> User</a></li>
+                <li class="active">User</li>
+            </ul>
             <div class="panel-body">
                 <form action="" method="post" role="form">
                     <div class="form-group">

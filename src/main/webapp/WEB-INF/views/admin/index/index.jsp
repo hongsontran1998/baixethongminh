@@ -23,7 +23,7 @@
 	            </div>
 	        </div>
 	    </div>
-	    <div class="col-md-3">
+	    <!-- <div class="col-md-3">
 	        <div class="sm-st clearfix">
 	            <span class="sm-st-icon st-red"><i class="fa fa-check-square-o"></i></span>
 	            <div class="sm-st-info">
@@ -40,18 +40,18 @@
 	                Total Messages
 	            </div>
 	        </div>
-	    </div>
+	    </div> -->
     </security:authorize>
 
 
 </div>
 
 <!-- Main row -->
-<div class="row">
+<!-- <div class="row">
 
     <div class="col-lg-4">
 
-        <!--chat start-->
+        chat start
         <section class="panel">
             <header class="panel-heading">
                 Notifications
@@ -112,3 +112,4 @@
         </section>
     </div>
 </div>
+ -->

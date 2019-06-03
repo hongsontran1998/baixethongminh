@@ -7,16 +7,10 @@
             <header class="panel-heading">
                 Sửa giá thành
             </header>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="breadcrumb">
-                            <li><a href="${pageContext.request.contextPath}/admincp"><i class="fa fa-home"></i> Home</a></li>
-                            <li><a href="${pageContext.request.contextPath}/admin/price/index"> Price</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <ul class="breadcrumb">
+                <li><a href="${pageContext.request.contextPath}/admincp"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/admin/price/index"> Price</a></li>
+            </ul>
             <c:if test="${not empty msg}">
             	<div style="padding: 15px 11px;margin-left: 15px;background: #f0f3f4;margin-right: 15px;">
             		${msg}
