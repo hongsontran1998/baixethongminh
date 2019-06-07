@@ -40,6 +40,7 @@ public class AdminPriceController {
 		}
 		SystemConstant.GIAM_GIA = giamgia;
 		SystemConstant.PRICE = price;
+		priceDAO.updateGiaThanhVaGiamGia(price, giamgia);
 		ra.addFlashAttribute("msg", "Cập nhật thành công price!");
 		return "redirect:/admin/price/index";
 	}

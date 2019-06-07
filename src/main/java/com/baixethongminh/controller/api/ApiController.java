@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.baixethongminh.constant.SystemConstant;
+import com.baixethongminh.dao.PriceDAO;
 import com.baixethongminh.dao.UserDAO;
 import com.baixethongminh.entity.User;
 
@@ -16,6 +17,8 @@ public class ApiController {
 
 	@Autowired
 	private UserDAO userDAO;
+	@Autowired
+	private PriceDAO priceDAO;
 
 	@RequestMapping(path = "card/{cardId}", method = RequestMethod.GET)
 	@ResponseBody
@@ -31,18 +34,27 @@ public class ApiController {
 			result = "2;" + user.getUsername();
 			return result;
 		}
+		loadPriceFormDB();
 		int price = (int) (SystemConstant.PRICE * (1 - SystemConstant.GIAM_GIA * 0.01));
+		System.out.println(price);
 		System.out.println(price);
 		if (user.getTotal() - price >= 0) {
 			user.setTotal(user.getTotal() - price);
 			userDAO.update(user);
 			result = "1";
+		} else {
+			result = "2";
 		}
 
 		
 		result += (";" + user.getUsername());
 		System.out.println("ket qua: " + result);
 		return result;
+	}
+	
+	public void loadPriceFormDB() {
+		SystemConstant.PRICE = priceDAO.findPrice();
+		SystemConstant.GIAM_GIA = priceDAO.findGiamGia();
 	}
 
 	/*

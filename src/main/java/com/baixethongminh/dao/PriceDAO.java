@@ -22,7 +22,8 @@ public class PriceDAO {
 	public Integer findGiamGia() {
 		return jdbcTemplate.queryForObject("select giamgia from price", Integer.class);
 	}
-//	public Integer updateGiaThanh() {
-////		return jdbcTemplate.update("update price set p")
-//	}
+	
+	public Integer updateGiaThanhVaGiamGia(Integer price, Integer giamgia) {
+		return jdbcTemplate.update("update price set price = ?, giamgia = ?", new Object[] { price, giamgia });
+	}
 }

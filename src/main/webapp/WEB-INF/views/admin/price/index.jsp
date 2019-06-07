@@ -22,7 +22,7 @@
                     
                     <div class="form-group">
                         <label for=price>Price</label>
-                        <input type="text" class="form-control" value="${price}" name="price" id="price" placeholder="Price">
+                        <input type="number" min=0 class="form-control" value="${price}" name="price" id="price" placeholder="Price">
                     </div>
                   	<div class="form-group">
                         <label for="giamgia">Giảm giá</label>
