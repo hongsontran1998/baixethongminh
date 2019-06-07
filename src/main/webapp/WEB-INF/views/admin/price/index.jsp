@@ -24,7 +24,15 @@
                         <label for=price>Price</label>
                         <input type="text" class="form-control" value="${price}" name="price" id="price" placeholder="Price">
                     </div>
-                  
+                  	<div class="form-group">
+                        <label for="giamgia">Giảm giá</label>
+                        <select name="giamgia" id="giamgia" class="form-control m-b-10">
+                        	<c:forEach begin="0" end="100" step="10" var="i">
+                            	<option ${i == giamgia ? 'selected' : ''} value="${i}">${i}%</option>
+                        	</c:forEach>
+                         </select>
+                         <form:errors path="user.enable"></form:errors>
+                    </div>
                     <button type="submit" class="btn btn-info">Submit</button>
                 </form>
             </div>

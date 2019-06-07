@@ -207,14 +207,14 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="${pageContext.request.contextPath}/admin/profile">
+                            <a href="${pageContext.request.contextPath}/profile">
                                 <i class="fa fa-user fa-fw pull-right"></i>
                                 Profile
                             </a>
-                            <a data-toggle="modal" href="${pageContext.request.contextPath}/adminUrl/#modal-user-settings">
+                            <%-- <a data-toggle="modal" href="${pageContext.request.contextPath}/adminUrl/#modal-user-settings">
                                 <i class="fa fa-cog fa-fw pull-right"></i>
                                 Settings
-                            </a>
+                            </a> --%>
                         </li>
 
                         <li class="divider"></li>

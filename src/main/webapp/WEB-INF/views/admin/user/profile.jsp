@@ -15,9 +15,11 @@
             </ul>
             <div class="panel-body">
                 <form action="" method="post" role="form">
+                	<input type="hidden" name="id" value="${user.id}" />
+                	<input type="hidden" name="enable" value="${user.enable}" />
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" value="${user.username}" name="username" id="username" placeholder="Username">
+                        <input readonly type="text" class="form-control" value="${user.username}" name="username" id="username" placeholder="Username">
                         <form:errors path="user.username"></form:errors>
                     </div>
                     <div class="form-group">
@@ -32,29 +34,12 @@
                     </div>
                     <div class="form-group">
                         <label for="cardId">CardId</label>
-                        <input type="text" class="form-control" value="${user.cardId}" name="cardId" id="cardId" placeholder="CardId">
+                        <input type="text" class="form-control" readonly value="${user.cardId}" name="cardId" id="cardId" placeholder="CardId">
                         <form:errors path="user.cardId"></form:errors>
-                    </div>
-                   <div class="form-group">
-                        <label for="enable">Enable</label>
-                        <select name="enable" id="enable" class="form-control m-b-10">
-                             <option ${user.enable == 1 ? 'selected' : ''} value="1">Active</option>
-                             <option ${user.enable == 0 ? 'selected' : ''} value="0">Deactive</option>
-                         </select>
-                         <form:errors path="user.enable"></form:errors>
-                    </div>
-                   <div class="form-group">
-                        <label for="roleId">Role</label>
-                        <select name="roleId" id="roleId" class="form-control m-b-10">
-                             <c:forEach items="${roles}" var="role">
-                                <option ${user.role.id == role.id ? 'selected' : ''} value="${role.id}">${role.name}</option>
-                             </c:forEach>
-                         </select>
-                         <form:errors path="user.role"></form:errors>
                     </div>
                     <div class="form-group">
                         <label for="total">Total</label>
-                        <input type="number" class="form-control"  value="${user.total}" name="total" id="total" placeholder="Total">
+                        <input type="number" readonly class="form-control"  value="${user.total}" name="total" id="total" placeholder="Total">
                         <form:errors path="user.total"></form:errors>
                     </div>
                   

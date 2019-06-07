@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.baixethongminh.constant.SystemConstant;
 import com.baixethongminh.dao.UserDAO;
 import com.baixethongminh.entity.User;
 
@@ -30,7 +31,8 @@ public class ApiController {
 			result = "2;" + user.getUsername();
 			return result;
 		}
-		int price = 50000;
+		int price = (int) (SystemConstant.PRICE * (1 - SystemConstant.GIAM_GIA * 0.01));
+		System.out.println(price);
 		if (user.getTotal() - price >= 0) {
 			user.setTotal(user.getTotal() - price);
 			userDAO.update(user);
