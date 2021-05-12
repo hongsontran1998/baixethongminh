@@ -9,7 +9,7 @@
 
 	<properties>
 		<spring.version>5.0.2.RELEASE</spring.version>
-		<springsecurity.version>4.2.8.RELEASE</springsecurity.version>
+		<springsecurity.version>5.2.10.RELEASE</springsecurity.version>
 	</properties>
 	<dependencies>
 		<!-- THƯ VIỆN CỦA SPRING MVC -->
